@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live Tournament Editor</title>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<center>
+	<h1 class="header">	
+		Live Tournament Bracket
+</h1>
+	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div">
+<br>
+		<h3 id="loginorsign">Log In</h3>
+		<div class="form-group">
+			<form>
+		  <label >User Name:</label>
+			<input type="text" id="user_name" class="form-control" placeholder="Username" required minlength="3" maxlength="20">
+            <br>
+            <label >Password</label>
+            <br>
+            <input type="password" id="password" class="form-control" placeholder="Username" required minlength="8" maxlength="20">
+		</div>
+		<button id="login" class="btn btn-primary login_button" onclick="getIn(); return false;">Log in</button>
+        <br>
+        <br>
+        <button id="signup" class="btn btn-success login_button" onclick="Next(); return false;">Sign Up Instead</button>
+        <br>
+        <br>
+        <button class="btn btn-primary" onclick="back(); return false;">Back</button>
+		<br>
+		<label id='error'></label>
+		<br><br>
+	</form>
+	</div>
+</center>
+<script src="main.js"></script>
+</body>
+</html>

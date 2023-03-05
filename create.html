@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live Tournament Bracket</title>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="container">
+	<center>
+        <br>
+        <br>
+		<h1 class="header">	
+			Live Tournament Bracket	
+		</h1>
+<br>
+<br>
+		<h3 class="color_white">Please answer the following to create a live bracket:</h3>
+	<div class="output">
+		<form onsubmit="return false;">
+		<label>Bracket Name:</label>
+        <br>
+        <input type="text" id="name" class="form-control" placeholder="E.g. Splatoon 3 Competition" minlength="5" maxlength="40" required>
+		<label>Amount Of People in the bracket.</label>
+        <br>
+		<select name="amount" id="ppl" required>
+			<option value="blank">---</option>
+			<option value="2">2</option>
+			<option value="4">4</option>
+			<option value="8">8</option>
+			<option value="16">16</option>
+			<option value="32">32</option>
+		</select>
+		<br>
+		<br>
+		<label>Password: (leave black for public)</label>
+        <br>
+        <input type="text" id="password" class="form-control" placeholder="Password">
+		<br>
+		<button id="create" class="btn btn-success login_button" onclick="Create()">Create Bracket</button>
+		<label id='error'></label>
+	</form>
+	</div>
+	</center>
+</div>
+<script src="create.js"></script>
+</body>
+</html>
