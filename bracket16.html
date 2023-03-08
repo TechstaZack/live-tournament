@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live Tournament Bracket</title>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="bracket.css">
+
+</head>
+<body>
+<div class="container">
+	<center>
+        <br>
+        <br>
+		<h1 class="header">	
+			Live Tournament Bracket	
+		</h1>
+<br>
+<br>
+
+		<h3 class="color_white" id="label1"></h3>
+		<div class="output">
+		<h1>Tournament Bracket</h1>
+		<main id="tournament">
+            <ul>
+                <h4 class="gimmeSpace">All People:</h4>
+                <li id="entered1"></li>
+                <li id="entered2"></li>
+                <li id="entered3"></li>
+                <li id="entered4"></li>
+                <li id="entered5"></li>
+                <li id="entered6"></li>
+                <li id="entered7"></li>
+                <li id="entered8"></li>
+                <li id="entered9"></li>
+                <li id="entered10"></li>
+                <li id="entered11"></li>
+                <li id="entered12"></li>
+                <li id="entered13"></li>
+                <li id="entered14"></li>
+                <li id="entered15"></li>
+                <li id="entered16"></li>
+            </ul>
+
+
+            <ul class="round round-1">
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_1">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_2" >Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_3">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_4">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_5">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_6">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_7">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_8">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_9">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_10">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_11">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_12">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_13">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_14">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_15">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_16">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+            </ul>
+            <ul class="round round-2">
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_17">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_18">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_19">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_20">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_21">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_22">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_23">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_24">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+            </ul>
+            <ul class="round round-3">
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_25">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_26">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top"id="place_27">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_28">Empty</li>
+         
+              <li class="spacer">&nbsp;</li>
+            </ul>
+            <ul class="round round-4">
+              <li class="spacer">&nbsp;</li>
+             
+              <li class="game game-top" id="place_29">Empty</li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li class="game game-bottom "id="place_30">Empty</li>
+             
+              <li class="spacer">&nbsp;</li>
+            </ul>  
+          </main>
+  
+  
+	</div>
+	<br>
+	<br>
+	</center>
+</div>
+<script src="bracket16.html"></script>
+</body>
+</html>

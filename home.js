@@ -45,5 +45,5 @@ getData();
 
 function redirectToRoomName(name){
     localStorage.setItem("room_name", name);
-    window.location = "bracket.html"
+    window.location = "join.html"
   }

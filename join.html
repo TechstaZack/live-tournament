@@ -14,9 +14,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-
+<script src="join.js"></script>
 </head>
-<body>
+<body id="body">
 <div class="container">
 	<center>
         <br>
@@ -26,14 +26,20 @@
 		</h1>
 <br>
 <br>
-		<h3 class="color_white" id="label1"></h3>
 	<div class="output">
-		<label id="label2"></label>
-       
-		
+		<form onsubmit="return false;">
+		<label>Bracket Password:</label>
+        <input type="text" id="password" class="form-control" placeholder="Password">
+		<br>
+		<label>Your username for the bracket:</label>
+        <input type="text" id="bracketName" class="form-control" placeholder="Name">
+		<br>
+		<button id="create" class="btn btn-success login_button" onclick="login()">Login</button>
+		<label id='error'></label>
+	</form>
 	</div>
 	</center>
 </div>
-<script src="join.js"></script>
+
 </body>
 </html>
